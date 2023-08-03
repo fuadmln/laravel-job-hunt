@@ -18,9 +18,11 @@ return new class extends Migration
                 ->cascadeOnDelete();
             $table->string('name');
             $table->text('description')->default('');
-            $table->dateTime('start_date');
-            $table->dateTime('due_date');
-            $table->dateTime('schedule_date');
+            $table->dateTime('start_date')->nullable();
+            $table->dateTime('due_date')->nullable();
+            $table->dateTime('schedule_date')->nullable();
+            $table->enum('status', 
+                ['upcoming', 'done', 'passed', 'failed', 'aborted']);
             $table->text('note')->default('');
             $table->text('review')->default('');
             $table->timestamps();
