@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Step;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Job extends Model
 {
@@ -12,4 +13,9 @@ class Job extends Model
     protected $fillable = [
         'title', 'company', 'description', 'location', 'salary_min', 'salary_max', 'job_type', 'status', 'priority', 'note', 'reference'
     ];
+
+    public function steps()
+    {
+        return $this->hasMany(Step::class);
+    }
 }
