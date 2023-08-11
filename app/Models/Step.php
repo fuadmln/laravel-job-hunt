@@ -14,6 +14,8 @@ class Step extends Model
         'job_id', 'name', 'description', 'start_date', 'due_date', 'schedule_date', 'status', 'note', 'review'
     ];
 
+    public const STATUS_ENUM = ['upcoming', 'done', 'passed', 'failed', 'aborted'];
+
     public function job()
     {
         return $this->belongsTo(Job::class);
