@@ -57,5 +57,51 @@
             </table>
          </div>
       </div>
+
+      <div class="row">
+         <div class="col">
+            <div class="table-responsive">
+               <table class="table caption-top">
+                  <caption>Steps</caption>
+                  <thead>
+                  <tr class="table-dark">
+                     <th scope="col">#</th>
+                     <th scope="col">Name</th>
+                     <th scope="col">Date</th>
+                     <th scope="col">Description</th>
+                     <th scope="col">Status</th>
+                     <th scope="col">Note</th>
+                     <th scope="col">Review</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  @foreach ($job["steps"] as $step)
+                     <tr>
+                        <th scope="row">{{ $loop->iteration }}</th>
+                        <td>{{ $step["name"] }}</td>
+                        <td>{{ $step["schedule_date"] }}</td>
+                        <td class="w-20">
+                           <span class="line-truncate-4">
+                              {{ $step["description"] }}
+                           </span>
+                        </td>
+                        <td>{{ $step["status"] }}</td>
+                        <td class="w-20">
+                           <span class="line-truncate-4">
+                              {{ $step["note"] }}
+                           </span>
+                        </td>
+                        <td class="w-20">
+                           <span class="line-truncate-4">
+                           {{ $step["review"] }}
+                        </span>
+                        </td>
+                     </tr>
+                  @endforeach
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
    </main>
 @endsection

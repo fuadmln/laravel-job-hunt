@@ -5,6 +5,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <link href="{{ URL::asset('css/bootstrap.min.css') }}" rel="stylesheet">
+   <link href="{{ URL::asset('css/my-style.css') }}" rel="stylesheet">
    <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
    <title>
       @yield('title', 'Job Hunt App')
