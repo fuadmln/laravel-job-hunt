@@ -75,7 +75,7 @@
    Array.from(tableRowElements).forEach(e => {
       let jobId = e.dataset.jobId;
       e.addEventListener('click', (event) => {
-         window.location = `http://127.0.0.1:8000/jobs/${jobId}`;
+         window.location = `/jobs/${jobId}`;
       });
    })
 </script>
