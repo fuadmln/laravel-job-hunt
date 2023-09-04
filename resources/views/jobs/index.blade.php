@@ -15,10 +15,9 @@
                <th scope="col">Priority</th>
             </tr>
          </thead>
-         <tbody>
-
+         <tbody id="table-rows">
             @foreach ($jobs as $job)
-            <tr>
+            <tr data-job-id="{{ $job["id"] }}" style="cursor: pointer;">
                <th scope="row">{{ $loop->iteration }}</th>
                <td>{{ ucwords($job["title"]) }}</td>
                <td>{{ ucwords($job["company"]) }}</td>
@@ -67,4 +66,17 @@
          </tbody>
       </table>
    </main>
+@endsection
+
+@section('script')
+<script>
+   let tableRowElements = document.querySelector('#table-rows').children;
+   
+   Array.from(tableRowElements).forEach(e => {
+      let jobId = e.dataset.jobId;
+      e.addEventListener('click', (event) => {
+         window.location = `http://127.0.0.1:8000/jobs/${jobId}`;
+      });
+   })
+</script>
 @endsection

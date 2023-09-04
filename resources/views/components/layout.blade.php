@@ -21,5 +21,8 @@
       @include('components/footer')
    @show
 
+   @section('script')
+   @show
+
 </body>
 </html>
