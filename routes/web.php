@@ -21,3 +21,8 @@ Route::get('/', function () {
 Route::resource('jobs', JobController::class)->only([
     'index', 'show'
 ]);
+
+Route::get('/find-jobs', function(){
+    return view('find-jobs');
+    // echo 'find jobs';
+});
