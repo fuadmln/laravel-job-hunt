@@ -19,4 +19,9 @@ class JobController extends Controller
         $job = $job->load('steps')->toArray();
         return view('jobs.show', compact('job'));
     }
+
+    public function create()
+    {
+        return view('jobs.create');
+    }
 }

@@ -5,6 +5,9 @@
 @section('main')
    <main class="container-sm">
       <h1>Jobs list</h1>
+      <a class="btn btn-primary mb-2 mt-3" href="/jobs/create">
+         <b>+</b> New Job Application
+      </a>
       <table class="table table-hover">
          <thead>
             <tr class="table-dark">

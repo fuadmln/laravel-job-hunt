@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 Route::resource('jobs', JobController::class)->only([
-    'index', 'show'
+    'index', 'show', 'create'
 ]);
 
 Route::get('/find-jobs', function(){
