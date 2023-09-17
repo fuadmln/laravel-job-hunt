@@ -19,6 +19,12 @@
          "img_url" => ""
       ],
       [
+         "name" => "Tech in Asia",
+         "url" => "https://www.techinasia.com/jobs/search",
+         "img_url" => ""
+      ],
+
+      [
          "name" => "LinkedIn",
          "url" => "https://www.linkedin.com/jobs/",
          "img_url" => ""
