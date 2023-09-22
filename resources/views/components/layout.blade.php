@@ -12,6 +12,9 @@
    </title>
 </head>
 <body class="d-flex flex-column min-vh-100">
+   @section('header')
+      @include('components/header')
+   @show
    
    @section('main')
       This is main content
