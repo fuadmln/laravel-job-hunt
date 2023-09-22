@@ -24,5 +24,9 @@ Route::resource('jobs', JobController::class)->only([
 
 Route::get('/find-jobs', function(){
     return view('find-jobs');
-    // echo 'find jobs';
+});
+
+Route::get('/help', function(){
+    // return view('help');
+    return "To be implemented. Help page is information about how use this web";
 });
